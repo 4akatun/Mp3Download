@@ -6,7 +6,7 @@ import os, signal, sys
 
 # CONTRON PROGRAMME MANAGEMENT
 def def_hundler(sig, frame):
-    print("\n\n[!] Saliendo...\n")
+    print("\n\n[!] Exit...\n")
     sys.exit(1)
 
 signal.signal(signal.SIGINT, def_hundler)
