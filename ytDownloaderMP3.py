@@ -2,7 +2,14 @@
 
 ## IMPORT LIBRARTY
 from pytube import YouTube
-import os
+import os, signal, sys
+
+# CONTRON PROGRAMME MANAGEMENT
+def def_hundler(sig, frame):
+    print("\n\n[!] Saliendo...\n")
+    sys.exit(1)
+
+signal.signal(signal.SIGINT, def_hundler)
 
 ## URL INPUT USER
 yt = YouTube(str(input("Enter the URL of the mp3 you want to download: \n>>\t")))
